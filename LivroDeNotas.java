@@ -1,5 +1,15 @@
 public class LivroDeNotas{
+    //variável de instância
+    String nomeDisciplina;
+
     public void exibirMensagem(){
-        System.out.println("Bem vindo ao livro de notas");
+        System.out.printf("Bem vindo ao livro de notas de %s \n", nomeDisciplina);
+    }
+    
+    //construtor padrão (aquele cuja lista de parâmetros é vazia)
+    LivroDeNotas(String n){
+        //shadowing, aconteceria caso o nome dessa String fosse nomeDisciplina, assim por conta dos nomes iguais a mais recente acaba deixando a outra na "sombra"
+        //para corrigir isso, você insere o this. atrás do objeto que já existe na classe
+        nomeDisciplina = n;
     }
 }
